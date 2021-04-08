@@ -18,6 +18,23 @@ class ratingFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_rating, container, false)
         viewModel = ViewModelProvider(requireActivity()).get(MyViewModel::class.java)
+        var imageID =when(viewModel.position){
+            0 -> R.drawable.french_bulldog
+            1 -> R.drawable.english_bulldog
+            2 -> R.drawable.belgian_malinois
+            3 -> R.drawable.german_shepherd
+            else -> R.drawable.chihuahuas
+        }
+        var nameString =when(viewModel.position){
+            0 -> R.string.FRENCH
+            1 -> R.string.ENGLISH
+            2 -> R.string.BELGIAN
+            3 -> R.string.GERMAN
+            else -> R.string.CHIU
+        }
+        view.ratingBar.rating = viewModel.ratingList[viewModel.position]
+        view.nameText.text =getString(nameString)
+        view.mainImage.setImageResource(imageID)
         view.setRatingButton.setOnClickListener {
 
             viewModel.ratingList[viewModel.position] =view.ratingBar.rating
