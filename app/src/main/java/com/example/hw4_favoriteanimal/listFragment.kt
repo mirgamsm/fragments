@@ -6,13 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
+import kotlinx.android.synthetic.main.fragment_list.*
 import kotlinx.android.synthetic.main.fragment_list.view.*
 
 
 class listFragment : Fragment() {
 
     lateinit var viewModel: MyViewModel
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,28 +23,42 @@ class listFragment : Fragment() {
 
         viewModel=ViewModelProvider(requireActivity()).get(MyViewModel::class.java)
 
-            view.belgianButton.setOnClickListener {
-                beginTrans()
-                viewModel.position =0
-            }
-            view.chichuahuaButton.setOnClickListener {
-                beginTrans()
-                viewModel.position =1
-            }
-            view.germanButton.setOnClickListener {
-                beginTrans()
-                viewModel.position =2
-            }
-            view.englishButton.setOnClickListener {
-                beginTrans()
-                viewModel.position =3
-            }
-            view.frenchButton.setOnClickListener {
-                beginTrans()
-                viewModel.position =4
-            }
+        view.frenchRatingText.text =viewModel.ratingList[0].toString()
+        view.englishRatingText.text =viewModel.ratingList[1].toString()
+        view.belgianRatingText.text =viewModel.ratingList[2].toString()
+        view.germanRatingText.text =viewModel.ratingList[3].toString()
+        view.chuiRatingText.text =viewModel.ratingList[4].toString()
+
+        view.frenchButton.setOnClickListener {
+            beginTrans()
+            viewModel.position =0
+        }
+        view.englishButton.setOnClickListener {
+            beginTrans()
+            viewModel.position =1
+        }
+        view.belgianButton.setOnClickListener {
+            beginTrans()
+            viewModel.position =2
+        }
+        view.germanButton.setOnClickListener {
+            beginTrans()
+            viewModel.position =3
+        }
+        view.chichuahuaButton.setOnClickListener {
+            beginTrans()
+            viewModel.position =4
+        }
+
+
+
 
         return view
+    }
+    companion object {
+        @JvmStatic fun newInstance() =
+            listFragment().apply {
+            }
     }
 
     private fun beginTrans(){

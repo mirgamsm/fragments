@@ -18,7 +18,12 @@ class ratingFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_rating, container, false)
         viewModel = ViewModelProvider(requireActivity()).get(MyViewModel::class.java)
-        viewModel.ratingList[viewModel.position] =view.ratingBar.rating
+        view.setRatingButton.setOnClickListener {
+
+            viewModel.ratingList[viewModel.position] =view.ratingBar.rating
+            beginTrans()
+
+        }
         return view
     }
 
@@ -31,5 +36,9 @@ class ratingFragment : Fragment() {
                 }
             }
     }
-
+    private fun beginTrans(){
+        activity!!.supportFragmentManager.beginTransaction()
+            .replace(R.id.main_Con, listFragment.newInstance())
+            .commit()
+    }
 }

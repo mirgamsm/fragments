@@ -49,10 +49,11 @@
                 android:textColor="#FFFFFF" />
 
             <TextView
-                android:id="@+id/textView21"
+                android:id="@+id/frenchRatingText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:textAlignment="center"
+                android:textColor="#FFFFFF" />
 
             <ImageButton
                 android:id="@+id/englishButton"
@@ -79,10 +80,11 @@
                 android:textColor="#FFFFFF" />
 
             <TextView
-                android:id="@+id/textView22"
+                android:id="@+id/englishRatingText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:textAlignment="center"
+                android:textColor="#FFFFFF" />
 
             <ImageButton
                 android:id="@+id/belgianButton"
@@ -109,10 +111,11 @@
                 android:textColor="#FFFFFF" />
 
             <TextView
-                android:id="@+id/textView23"
+                android:id="@+id/belgianRatingText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:textAlignment="center"
+                android:textColor="#FFFFFF" />
 
             <ImageButton
                 android:id="@+id/germanButton"
@@ -139,10 +142,11 @@
                 android:textColor="#FFFFFF" />
 
             <TextView
-                android:id="@+id/textView24"
+                android:id="@+id/germanRatingText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:textAlignment="center"
+                android:textColor="#FFFFFF" />
 
             <ImageButton
                 android:id="@+id/chichuahuaButton"
@@ -169,10 +173,11 @@
                 android:textColor="#FFFFFF" />
 
             <TextView
-                android:id="@+id/textView25"
+                android:id="@+id/chuiRatingText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:textAlignment="center"
+                android:textColor="#FFFFFF" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
