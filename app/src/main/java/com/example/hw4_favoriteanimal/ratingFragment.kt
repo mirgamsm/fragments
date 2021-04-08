@@ -1,5 +1,6 @@
 package com.example.hw4_favoriteanimal
 
+import android.content.res.Configuration
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -54,8 +55,14 @@ class ratingFragment : Fragment() {
             }
     }
     private fun beginTrans(){
-        activity!!.supportFragmentManager.beginTransaction()
-            .replace(R.id.main_Con, listFragment.newInstance())
-            .commit()
+        if(resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            activity!!.supportFragmentManager.beginTransaction()
+                .replace(R.id.second_Con, ratingFragment())
+                .commit()
+        }else {
+            activity!!.supportFragmentManager.beginTransaction()
+                .replace(R.id.main_Con, ratingFragment.newInstance())
+                .commit()
+        }
     }
 }
