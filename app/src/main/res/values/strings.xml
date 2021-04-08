@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">HW4_FavoriteAnimal</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="FRENCH">French Bulldog</string>
+    <string name="ENGLISH">English Bulldog</string>
+    <string name="BELGIAN">Belgian Malinois</string>
+    <string name="CHIU">Chihuahua</string>
+    <string name="GERMAN">German Shepherd</string>
+    <string name="RATING">My Rating</string>
+
+</resources>
